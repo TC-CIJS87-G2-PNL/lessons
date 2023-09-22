@@ -2,8 +2,8 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/Homepage/Homepage";
 import Header from "./components/Header/Header";
-import Product from "./pages/Product/Product";
-import ProductDetails from "./pages/Product/subComponents/ProductDetails";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import AlbumDetail from "./pages/AlbumDetail/AlbumDetail";
 
 function App() {
   return (
@@ -12,10 +12,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/auth/login" element={<HomePage />} /> */}
-          {/* <Route path="/auth/register" element={<HomePage />} /> */}
-          <Route path="/products" element={<Product />} />
-          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/album/:id" element={<AlbumDetail />} />
         </Routes>
       </div>
     </BrowserRouter>
